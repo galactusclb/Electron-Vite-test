@@ -2,7 +2,6 @@
 import React from "react";
 import { Breadcrumb } from "antd";
 import { useNavigate } from "react-router-dom";
-import PropTypes from "prop-types";
 
 import style from "@styles/main.scss";
 
@@ -50,17 +49,6 @@ const PageBreadcrumb = ({
 			</Breadcrumb>
 		</div>
 	);
-};
-
-PageBreadcrumb.prototype = {
-	pageTitle: PropTypes.string,
-	isRootDisable: PropTypes.bool,
-	items: PropTypes.arrayOf(
-		PropTypes.shape({
-			path: PropTypes.string,
-			title: PropTypes.string.isRequired,
-		})
-	),
 };
 
 export default PageBreadcrumb;
